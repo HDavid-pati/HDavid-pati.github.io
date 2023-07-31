@@ -21,33 +21,14 @@ let resultOper = 0
 let aux1 = []
 let cifras = 0
 let factorConComaLeft = ''
-const miInput = document.getElementById('miInput')
 const clear = document.querySelector('.clear')
 const punto = document.querySelector('.punto')
 
-function tomarFocusDeInput(value){
-  value.addEventListener('click', function(){
-    miInput.focus()
-  })
+function tomarFocusDeInput(){
+  document.getElementById('miInput').focus()
+  
 }
-tomarFocusDeInput(cero)
-tomarFocusDeInput(uno)
-tomarFocusDeInput(dos)
-tomarFocusDeInput(tres)
-tomarFocusDeInput(cuatro)
-tomarFocusDeInput(cinco)
-tomarFocusDeInput(seis)
-tomarFocusDeInput(siete)
-tomarFocusDeInput(ocho)
-tomarFocusDeInput(nueve)
-tomarFocusDeInput(mas)
-tomarFocusDeInput(menos)
-tomarFocusDeInput(multipli)
-tomarFocusDeInput(division)
-tomarFocusDeInput(delet)
-tomarFocusDeInput(result)
-tomarFocusDeInput(punto)
-tomarFocusDeInput(clear)
+
 function separarConComas(num){
   if(typeOper.length < 1 ){
     factorLeft += num
