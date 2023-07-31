@@ -23,10 +23,10 @@ let cifras = 0
 let factorConComaLeft = ''
 const clear = document.querySelector('.clear')
 const punto = document.querySelector('.punto')
+const divPantalla = document.getElementById('miInput')
 
-function tomarFocusDeInput(){
+function tomarFocusDeeInput(){
   document.getElementById('miInput').focus()
-  
 }
 
 function separarConComas(num){
@@ -49,10 +49,10 @@ function separarConComas(num){
             aux1.unshift(factorLeft[i])
         }
       }
-      document.querySelector('.operación').value = aux1.join('')
+      document.querySelector('.operación').innerHTML = aux1.join('')
       factorConComaLeft = aux1.join('')
     } else {
-        document.querySelector('.operación').value += num
+        document.querySelector('.operación').innerHTML += num
         factorConComaLeft = factorLeft
       }
   }else{
@@ -77,9 +77,9 @@ function separarConComas(num){
       if(resultOper > 0){
         ponerComasAFactorLeftObtenidoDeResultOper(factorLeft)
       }
-      else{document.querySelector('.operación').value = factorConComaLeft + typeOper[0]+ aux1.join('')}
+      else{document.querySelector('.operación').innerHTML = factorConComaLeft + typeOper[0]+ aux1.join('')}
     } 
-    else {document.querySelector('.operación').value += num}
+    else {document.querySelector('.operación').innerHTML += num}
   }
 }
 function ponerComasAFactorLeftObtenidoDeResultOper(str){
@@ -94,7 +94,7 @@ function ponerComasAFactorLeftObtenidoDeResultOper(str){
     }
     else{aux3.unshift(str[i])}
   }
-  document.querySelector('.operación').value = aux3.join('')+ typeOper[0]+ aux1.join('')
+  document.querySelector('.operación').innerHTML = aux3.join('')+ typeOper[0]+ aux1.join('')
 }
 
 function verificarSiFactorLeftTienePunto(){
@@ -116,11 +116,11 @@ function verificarSiFactorRightTienePunto(){
 function operacionDecimal(num){
   if(typeOper.length > 0){
     factorRight += num
-    document.querySelector('.operación').value = factorLeft + typeOper[0]+ factorRight
+    document.querySelector('.operación').innerHTML = factorLeft + typeOper[0]+ factorRight
   }
   else{
     factorLeft += num
-    document.querySelector('.operación').value = factorLeft 
+    document.querySelector('.operación').innerHTML = factorLeft 
   }
 }
 cero.addEventListener('click',function(){
@@ -191,7 +191,7 @@ punto.addEventListener('click', function(){
 })
 
 function agregarFactor(str){
-    document.querySelector('.operación').value += str
+    document.querySelector('.operación').innerHTML += str
     if( resultOper >0){
         factorLeft = resultOper.toString()
     }
@@ -221,7 +221,7 @@ function verificarSiResultadoTienePunto(str){
 function ponerComasAlResultado(num){
   let str = num.toString()
   if(verificarSiResultadoTienePunto(str)){
-    document.querySelector('.operación').value = str
+    document.querySelector('.operación').innerHTML = str
     return false
   }
   let cifras2 = 0
@@ -235,7 +235,7 @@ function ponerComasAlResultado(num){
     }
     else{aux2.unshift(str[i])}
   }
-  document.querySelector('.operación').value = aux2.join('')
+  document.querySelector('.operación').innerHTML = aux2.join('')
 }
 let num1 = ''
 let num2 = ''
@@ -281,7 +281,7 @@ clear.addEventListener('click', function(){
   factorLeft = ''
   factorRight = ''
   resultOper = 0
-  document.querySelector('.operación').value = ''
+  document.querySelector('.operación').innerHTML = ''
   typeOper = []
 })
 
@@ -293,23 +293,23 @@ delet.addEventListener('click',function(){
     factorRight = faRight.join('')
     dejarConComasALeftDespuesDeEliminarUnNumero(factorLeft)
     dejarConComasARightDespuesDeEliminarUnNumero(factorRight)
-    document.querySelector('.operación').value = auxOfFactorLeft + typeOper[0]+ auxOfFactorRight
+    document.querySelector('.operación').innerHTML = auxOfFactorLeft + typeOper[0]+ auxOfFactorRight
   }
   else if(factorLeft.length >0 && typeOper.length >0 && factorRight.length <1){
     typeOper.pop()
     dejarConComasALeftDespuesDeEliminarUnNumero(factorLeft)
-    document.querySelector('.operación').value = auxOfFactorLeft
+    document.querySelector('.operación').innerHTML = auxOfFactorLeft
   }
   else if(factorLeft.length >0 && typeOper.length <1 && resultOper >0){
     resultOper = 0
-    document.querySelector('.operación').value = ''
+    document.querySelector('.operación').innerHTML = ''
     factorLeft = ''
   }
   else{
     faLef.pop()
     factorLeft = faLef.join('')
     dejarConComasALeftDespuesDeEliminarUnNumero(factorLeft)
-    document.querySelector('.operación').value = auxOfFactorLeft
+    document.querySelector('.operación').innerHTML = auxOfFactorLeft
     resultOper = 0
   }
 })

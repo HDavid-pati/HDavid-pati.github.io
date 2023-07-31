@@ -144,9 +144,8 @@ body::-webkit-scrollbar-thumb{
     'punto num9 delet delet clear';
     border: 1px solid cornflowerblue;
 }
-input{
+#miInput{
     grid-area: input;
-    display: inline-block;
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -154,10 +153,9 @@ input{
     font-size: 25px;
     font-weight: bold;
     background-color: rgb(255, 255, 255,.4);
-    border: none;
-    outline: none;
     border-radius: .5rem;
     color: wheat;
+    text-align: right;
 }
 .titulo-calculadora{
     grid-area: title;
@@ -281,7 +279,7 @@ button:hover{
         padding: 5px;
         font-size: 20px;
     }
-    input{
+    #miInput{
         padding: 0 5px;
         font-size: 20px;
     }
