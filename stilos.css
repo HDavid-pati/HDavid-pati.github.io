@@ -313,6 +313,7 @@ button:hover{
         order: 2;
         gap: 10px;
         margin-bottom: 20px;
+        margin-top: 10px;
         background-color: rgba(0, 0, 0, 0.644);
         border: 1px solid rgba(100, 148, 237, 0.829);
     }
@@ -328,6 +329,18 @@ button:hover{
     .factor{
         color: rgba(0, 0, 255, 0.767);
         border: 1px solid rgba(100, 148, 237, 0.829);
+    }
+    .result{
+        color: greenyellow;
+    }
+    .delete{
+        color: red;
+    }
+    .clear{
+        color: red;
+    }
+    .punto{
+        color: white;
     }
     .num{
         border: 1px solid rgba(100, 148, 237, 0.829)
