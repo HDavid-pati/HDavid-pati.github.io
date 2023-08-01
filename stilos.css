@@ -155,7 +155,9 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(255, 255, 255,.4);
     border-radius: .5rem;
     color: wheat;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .titulo-calculadora{
     grid-area: title;
@@ -246,8 +248,8 @@ button{
     background-color: rgba(0, 0, 0, 0.123);
 }
 button:hover{
-    background-color: rgba(255, 255, 255, 0.24);
-    transition: 0.4s;
+    background-color: rgba(255, 255, 255, 0.151);
+    transition: 0.3s;
 }
 @media(max-width: 1112px){
     .contenedor-de-calculadora{
@@ -295,21 +297,42 @@ button:hover{
 }
 @media(max-width: 480px){
     .contenedor-de-calculadora{
+        width: 100%;
         display: flex;
-        gap: 10px;
+        gap: 15px;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 1px;
     }
     .calculadora{
         order: 1;
+        background-color: rgba(0, 0, 0, 0.616);
+        border: 1px solid rgba(100, 148, 237, 0.829);
     }
     .historial-de-operaciones{
         order: 2;
+        gap: 10px;
+        margin-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.644);
+        border: 1px solid rgba(100, 148, 237, 0.829);
     }
     body::-webkit-scrollbar{
         width: 3px;
     }
     .historial-de-operaciones::-webkit-scrollbar{
         width: 5px;
+    }
+    .tipe-oper{
+        color: rgba(0, 0, 255, 0.767);
+    }
+    .factor{
+        color: rgba(0, 0, 255, 0.767);
+        border: 1px solid rgba(100, 148, 237, 0.829);
+    }
+    .num{
+        border: 1px solid rgba(100, 148, 237, 0.829)
+    }
+    .hola{
+        color: aqua;
     }
 }
