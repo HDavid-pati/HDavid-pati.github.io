@@ -1,0 +1,110 @@
+button:active{
+  transition: 1s;
+  transform: scale(-0.5);
+}
+@media(max-width: 1112px){
+  .contenedor-de-calculadora{
+      width: 99%;
+      gap: 10px;
+  }
+  .calculadora{
+      padding: 8px;
+  }
+}
+
+@media(max-width: 768px){
+  .contenedor-de-calculadora{
+      grid-template-areas: 
+      'historia calculadora calculadora'
+      'historia calculadora calculadora';
+      width: 99%;
+      gap: 10px;
+  }
+  .calculadora{
+      padding: 5px;
+      height: 98%;
+      min-width: 99%;
+  }
+  .num{
+      padding: 5px;
+      font-size: 20px;
+  }
+  .factor{
+      padding: 5px;
+      font-size: 20px;
+  }
+  .num:active{
+      background-color: rgba(0, 255, 255, 0.274);
+  }
+  .factor:active{
+      background-color: rgba(0, 255, 255, 0.274);
+  }
+  #miInput{
+      padding: 0 5px;
+      font-size: 20px;
+  }
+  .titulo-calculadora{
+      font-size: 22px;
+  }
+  body::-webkit-scrollbar{
+      width: 5px;
+  }
+  .historial-de-operaciones::-webkit-scrollbar{
+      width: 2px;
+  }
+}
+
+@media(max-width: 480px){
+  .contenedor-de-calculadora{
+      width: 100%;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1px;
+  }
+  .calculadora{
+      order: 1;
+      background-color: rgba(0, 0, 0, 0.616);
+      border: 1px solid rgba(100, 148, 237, 0.829);
+  }
+  .historial-de-operaciones{
+      order: 2;
+      gap: 10px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.644);
+      border: 1px solid rgba(100, 148, 237, 0.829);
+  }
+  body::-webkit-scrollbar{
+      width: 3px;
+  }
+  .historial-de-operaciones::-webkit-scrollbar{
+      width: 5px;
+  }
+  .tipe-oper{
+      color: rgba(0, 0, 255, 0.767);
+  }
+  .factor{
+      color: rgba(0, 0, 255, 0.767);
+      border: 1px solid rgba(100, 148, 237, 0.829);
+  }
+  .result{
+      color: greenyellow;
+  }
+  .delete{
+      color: red;
+  }
+  .clear{
+      color: red;
+  }
+  .punto{
+      color: white;
+  }
+  .num{
+      border: 1px solid rgba(100, 148, 237, 0.829)
+  }
+  .hola{
+      color: aqua;
+  }
+}
