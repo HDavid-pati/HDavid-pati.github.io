@@ -155,9 +155,9 @@ body::-webkit-scrollbar-thumb{
     margin-bottom: 10px;
     font-size: 25px;
     font-weight: bold;
-    background-color: rgb(255, 255, 255,.4);
+    background-color: #f1f1f1;
     border-radius: .5rem;
-    color: wheat;
+    color: #0f0f0f;
     display: flex;
     align-items: center;
     justify-content: flex-end;
