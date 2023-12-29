@@ -74,10 +74,10 @@
       width: 5px;
   }
   .tipe-oper{
-      color: rgba(0, 0, 255, 0.541);
+      color: rgba(0, 0, 255, 0.39);
   }
   .factor{
-      color: rgba(0, 0, 255, 0.562);
+      color: rgba(0, 0, 255, 0.404);
       border: 1px solid rgba(100, 148, 237, 0.829);
   }
   .num:active{

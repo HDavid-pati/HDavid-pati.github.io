@@ -213,17 +213,15 @@ body::-webkit-scrollbar-thumb{
 .multipli{
     color: blue;
     grid-area: operMultipli;
-    
 }
 .division{
+    position: relative;
     color: blue;
     grid-area: operDivision;
-    
 }
 .result{
     color: greenyellow;
     grid-area: btnResult;
-    
 }
 .punto{
     grid-area: punto;
