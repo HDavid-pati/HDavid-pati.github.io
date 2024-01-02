@@ -73,16 +73,16 @@
   .historial-de-operaciones::-webkit-scrollbar{
       width: 5px;
   }
-  .tipe-oper{
-      color: rgba(0, 0, 255, 0.39);
-  }
-  .factor{
-      color: rgba(0, 0, 255, 0.404);
-      border: 1px solid rgba(100, 148, 237, 0.829);
-  }
-  .num:active{
+.tipe-oper{
+    color: rgb(100, 255, 100);
+}
+.factor{
+    color: rgb(100, 255, 100);
+    border: 1px solid rgba(100, 148, 237, 0.829);
+}
+.num:active{
     background-color: rgba(0, 255, 255, 0.274);
-  }
+}
   .factor:active{
     background-color: rgba(0, 255, 255, 0.274);
   }
